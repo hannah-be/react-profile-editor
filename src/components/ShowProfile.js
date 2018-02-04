@@ -1,7 +1,11 @@
 import React from 'react'
 
+const toCapitalize = (name) => {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
 const fullName = (firstName, lastName) => {
-  return `${firstName} ${lastName}`
+  return `${toCapitalize(firstName)} ${toCapitalize(lastName)}`
 }
 
 const ShowProfile = ({
@@ -12,7 +16,8 @@ const ShowProfile = ({
     return (
       <div>
         <img src={ user.profileImageURL } alt='profile' />
-        <h2>{ fullName(user.firstName, user.lastName)}</h2>
+      {!!user.profileImageURL &&
+        <h2>{ fullName(user.firstName, user.lastName)}</h2>}
       </div>
     )
   } else {

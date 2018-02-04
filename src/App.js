@@ -18,12 +18,12 @@ class App extends Component {
   // Method to handle firstname change
   // The 'event' provides context and data
   handleChangeFirstName = (event) => {
-    // Get the <input> { an HTMLInputElement }
+    // Get the <input> {HTMLInputElement}
     const input = event.target
-    // console.log(event.target.label)
     // Get the current text from the field
     const newFirstName = input.value
-    // Because we're working with the user property, we're going to either mutate it or create a copy of it, we're going to give setState an function that returns and object
+    // Because we're working with the user property, we're going to either mutate it or create a copy of it, we're going to give setState a function that returns and object
+    // Pass this.setState a function which returns and object:
     // Pass it the previous state and then return the key-value pairs that we want to update in the state
     this.setState((prevState) => {
       const user = prevState.user

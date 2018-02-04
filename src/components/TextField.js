@@ -1,6 +1,9 @@
 import React from 'react'
 
-const TextField = ({ value, onTextChange }) => {
+const TextField = ({ 
+  value, 
+  onTextChange 
+}) => {
   return (
     <input
       type="text"
